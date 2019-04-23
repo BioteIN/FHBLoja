@@ -1,2 +1,0 @@
-# FHBLoja
-Sistema de Vendas

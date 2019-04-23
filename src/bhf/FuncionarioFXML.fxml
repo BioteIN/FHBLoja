@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="1330.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.FuncionarioFXMLController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="117.0" prefWidth="1338.0" style="-fx-background-color: #099085;">
+         <children>
+            <Label layoutX="129.0" layoutY="43.0" text="Funcionarios" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="53.0" layoutY="89.0" size="60" />
+         </children>
+      </Pane>
+      <TableView fx:id="tabela" layoutX="564.0" layoutY="137.0" onMouseClicked="#actualizar01" prefHeight="483.0" prefWidth="746.0" stylesheets="@fullpackstyling.css">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="58.0" text="ID" />
+          <TableColumn fx:id="colNome" prefWidth="92.0" text="Nome" />
+            <TableColumn fx:id="colEndereco" prefWidth="75.0" text="Endereco" />
+            <TableColumn fx:id="colNuit" prefWidth="75.0" text="Nuit" />
+            <TableColumn fx:id="colData" prefWidth="75.0" text="Data de Nasc." />
+            <TableColumn fx:id="colTipo" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="colEmail" prefWidth="84.0" text="Email" />
+            <TableColumn fx:id="colTelefone" text="Telefone" />
+            <TableColumn fx:id="colUsuario" prefWidth="59.0" text="Usuario" />
+            <TableColumn fx:id="colSenha" prefWidth="95.0" text="Senha" />
+        </columns>
+      </TableView>
+      <GridPane alignment="CENTER" layoutX="4.0" layoutY="143.0" prefHeight="456.0" prefWidth="523.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="346.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="177.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="229.0" minHeight="10.0" prefHeight="214.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="22.0" text="Nome">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="65.0" text="Data de Nascimento">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="114.0" text="Endereco">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="162.0" text="Nuit">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="213.0" text="Tipo">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNome" layoutX="88.0" layoutY="22.0" maxWidth="215.0" minWidth="215.0" prefHeight="31.0" prefWidth="215.0" unFocusColor="BLACK" />
+                  <JFXDatePicker fx:id="dtNascimento" defaultColor="BLACK" layoutX="196.0" layoutY="63.0" prefHeight="31.0" prefWidth="145.0" />
+                  <JFXTextField fx:id="txtEndereco" layoutX="107.0" layoutY="112.0" maxWidth="194.0" minWidth="194.0" prefHeight="31.0" prefWidth="194.0" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="txtNuit" layoutX="73.0" layoutY="160.0" maxWidth="226.0" minWidth="226.0" prefHeight="31.0" prefWidth="226.0" unFocusColor="BLACK" />
+                  <JFXComboBox fx:id="jcTipo" layoutX="79.0" layoutY="214.0" prefHeight="25.0" prefWidth="215.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label layoutX="22.0" layoutY="19.0" text="Email">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="66.0" text="Telefone">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="114.0" text="Usuario">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="158.0" prefHeight="27.0" prefWidth="65.0" text="Senha">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtEmail" layoutX="99.0" layoutY="17.0" maxWidth="226.0" minWidth="215.0" prefHeight="31.0" prefWidth="215.0" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="txttelefone" layoutX="99.0" layoutY="66.0" maxWidth="215.0" minWidth="215.0" prefHeight="31.0" prefWidth="215.0" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="txtUsuario" layoutX="99.0" layoutY="112.0" maxWidth="215.0" minWidth="215.0" prefHeight="31.0" prefWidth="215.0" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="txtSenha" layoutX="99.0" layoutY="156.0" maxWidth="215.0" minWidth="215.0" prefHeight="31.0" prefWidth="215.0" />
+                  <JFXTextArea fx:id="txaObrs" layoutX="353.0" layoutY="51.0" maxWidth="346.0" minWidth="139.0" prefHeight="128.0" prefWidth="154.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label layoutX="7.0" layoutY="18.0" text="Observacoes">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Foto:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="186.0" fitWidth="177.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/foto.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Button fx:id="btRemover" layoutX="457.0" layoutY="599.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Remover">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btActualizar" layoutX="384.0" layoutY="599.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Actualizar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="bot" layoutX="319.0" layoutY="599.0" mnemonicParsing="false" onAction="#gravar" prefHeight="27.0" prefWidth="58.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Salvar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

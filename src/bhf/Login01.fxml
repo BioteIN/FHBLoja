@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="524.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.LoginFXMLController">
+   <children>
+      <ImageView fitHeight="524.0" fitWidth="777.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/4685.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="149.0" layoutY="168.0" prefHeight="328.0" prefWidth="396.0">
+         <children>
+            <ImageView fitHeight="363.0" fitWidth="396.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/Untitled.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fill="#4d4d4d" glyphName="USER" layoutX="62.0" layoutY="60.0" size="20" />
+            <JFXTextField fx:id="usuario" focusColor="BLACK" layoutX="78.0" layoutY="38.0" minWidth="255.0" prefHeight="31.0" prefWidth="255.0" promptText="Usuario" unFocusColor="BLACK" />
+            <FontAwesomeIconView fill="#4d4d4d" glyphName="LOCK" layoutX="64.0" layoutY="117.0" size="20" />
+            <JFXPasswordField fx:id="senha" focusColor="BLACK" layoutX="78.0" layoutY="95.0" maxWidth="255.0" minWidth="255.0" prefHeight="31.0" prefWidth="255.0" promptText="Senha" unFocusColor="BLACK" />
+            <JFXButton fx:id="btEntrar" layoutX="278.0" layoutY="139.0" onAction="#entrar01" prefHeight="33.0" prefWidth="74.0" text=" ">
+               <graphic>
+                  <FontAwesomeIconView fill="#3be40c" glyphName="SIGN_IN" size="25" textAlignment="RIGHT" />
+               </graphic></JFXButton>
+            <JFXButton fx:id="btRegistar" layoutX="64.0" layoutY="202.0" onAction="#registar" prefHeight="33.0" prefWidth="270.0" style="-fx-background-color: black;" text="Regista-se Aqui!" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

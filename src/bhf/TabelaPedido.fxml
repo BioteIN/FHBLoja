@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="661.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.TabelaPedidoController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="1054.0" style="-fx-background-color: #099085;">
+         <children>
+            <Label layoutX="79.0" layoutY="23.0" text="Lista de Pedidos" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tabelinha" layoutX="65.0" layoutY="138.0" onMouseClicked="#pagamento" prefHeight="456.0" prefWidth="929.0">
+        <columns>
+          <TableColumn fx:id="colunaId" prefWidth="146.0" text="Codigo" />
+          <TableColumn fx:id="colunaFuncionario" prefWidth="216.0" text="Funcionario" />
+            <TableColumn fx:id="colunaCliente" prefWidth="210.0" text="Cliente" />
+            <TableColumn fx:id="colunaData" prefWidth="177.0" text="Data de Pedido" />
+            <TableColumn fx:id="colunaEstado" prefWidth="179.0" text="Estado" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="385.0" layoutY="611.0" onAction="#refresh" prefHeight="38.0" prefWidth="71.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Actualizar" />
+      <JFXButton fx:id="btAddPedido" layoutX="472.0" layoutY="611.0" onAction="#adic" prefHeight="38.0" prefWidth="71.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Adicionar" />
+      <JFXButton layoutX="557.0" layoutY="611.0" onAction="#bbb" prefHeight="38.0" prefWidth="71.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Pagar" />
+      <JFXButton fx:id="btProdd" layoutX="26.0" layoutY="103.0" onAction="#verProdutos" prefHeight="30.0" prefWidth="210.0" text="   Verificar Produtos">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="78.0" layoutY="110.0" prefHeight="23.0" prefWidth="124.0" text="________________________" />
+   </children>
+</AnchorPane>

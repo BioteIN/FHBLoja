@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.EntradaController">
+   <children>
+      <BorderPane layoutX="1.0" layoutY="1.0" prefHeight="563.0" prefWidth="1080.0" AnchorPane.bottomAnchor="-37.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="1.0">
+         <left>
+            <Pane prefHeight="527.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="-3.0" prefHeight="500.0" prefWidth="228.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="263.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="382.0" minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="tfQuantidade" prefHeight="25.0" prefWidth="207.0" promptText="25" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="10.0" right="22.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <ComboBox fx:id="jcbProduto" prefHeight="25.0" prefWidth="203.0" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="25.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="jcbTipoEntrada" prefHeight="25.0" prefWidth="201.0" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets bottom="25.0" left="15.0" right="25.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="Produto">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="20.0" top="40.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label minWidth="-Infinity" text="Quantidade" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Tipo de Entrada" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#gravar" prefHeight="23.0" prefWidth="92.0" text=" " GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets bottom="20.0" left="60.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <FontAwesomeIconView glyphName="SAVE" onDragDetected="#gravar" size="20" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets bottom="20.0" left="97.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                        <Label prefHeight="17.0" prefWidth="101.0" text="Observacoes" GridPane.rowIndex="6" />
+                        <TextArea fx:id="taObs" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+         </left>
+         <top>
+            <Pane prefHeight="71.0" prefWidth="1080.0" style="-fx-background-color: #099085;" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GG_CIRCLE" layoutX="14.0" layoutY="53.0" size="60" wrappingWidth="20.0" />
+                  <Label layoutX="83.0" layoutY="10.0" prefHeight="45.0" prefWidth="289.0" text="Entrada de Produtos" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="cancel" layoutX="1038.0" layoutY="4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" style="-fx-background-color: #4BA5EA;" text=" " textFill="WHITE" />
+                  <MaterialIconView fill="WHITE" glyphName="CLOSE" layoutX="1047.0" layoutY="27.0" size="20" />
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <TableView fx:id="table" prefHeight="411.0" prefWidth="835.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="60.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <columns>
+                  <TableColumn fx:id="colunaProduto" prefWidth="209.0" text="Produto" />
+                  <TableColumn fx:id="colunaQuant" prefWidth="209.0" text="Quantidade" />
+                  <TableColumn fx:id="colunaTipo" prefWidth="209.0" text="Tipo de Entrada" />
+                  <TableColumn fx:id="colunData" prefWidth="209.0" text="Data de Entrada" />
+               </columns>
+               <columnResizePolicy>
+               </columnResizePolicy>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="531.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.AddProdutosController">
+   <children>
+      <Pane prefHeight="83.0" prefWidth="796.0" style="-fx-background-color: #099085;">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="327.0" layoutY="25.0" prefHeight="34.0" prefWidth="233.0" text="Novo Produto" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="48.0" layoutY="116.0" prefHeight="34.0" prefWidth="79.0" text="Nome">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtNome" layoutX="48.0" layoutY="150.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="48.0" layoutY="188.0" prefHeight="34.0" prefWidth="79.0" text="Peso">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="275.0" prefHeight="25.0" prefWidth="120.0" text="Estoque Fisico">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtEstoqueFisico" layoutX="48.0" layoutY="307.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="326.0" layoutY="117.0" prefHeight="25.0" prefWidth="130.0" text="Estoque Minimo">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtEstoqueMinimo" layoutX="326.0" layoutY="150.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="326.0" layoutY="193.0" prefHeight="25.0" prefWidth="103.0" text="Validade">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="326.0" layoutY="271.0" prefHeight="25.0" prefWidth="130.0" text="Preco por Unidade">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtPorUnidade" layoutX="326.0" layoutY="307.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="588.0" layoutY="125.0" text="Preco Total">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtTotal" layoutX="588.0" layoutY="150.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="588.0" layoutY="197.0" text="Quantidade/Embalagem">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtQuantidade" layoutX="588.0" layoutY="222.0" prefHeight="25.0" prefWidth="171.0" />
+      <Label layoutX="588.0" layoutY="275.0" text="Descricao">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextArea fx:id="txtArea" layoutX="588.0" layoutY="307.0" prefHeight="92.0" prefWidth="171.0" styleClass="jfx-text-area" stylesheets="@newCascadeStyleSheet.css" />
+      <Pane layoutY="488.0" prefHeight="65.0" prefWidth="796.0" style="-fx-background-color: #099085;">
+         <children>
+            <JFXButton fx:id="btAdd" layoutX="585.0" layoutY="16.0" onAction="#Adiconar" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #F39C12;" stylesheets="@newCascadeStyleSheet.css" text="Gravar" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="693.0" layoutY="16.0" onAction="#cancelar" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #DD4B39;" stylesheets="@newCascadeStyleSheet.css" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TextField fx:id="txtPeso" layoutX="48.0" layoutY="222.0" prefHeight="25.0" prefWidth="171.0" />
+      <JFXDatePicker fx:id="txtMarca" layoutX="325.0" layoutY="232.0" prefHeight="31.0" prefWidth="171.0" />
+   </children>
+</AnchorPane>

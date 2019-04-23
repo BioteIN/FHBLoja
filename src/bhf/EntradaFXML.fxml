@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.EntradaFXMLController">
+   <children>
+      <Pane layoutX="-11.0" layoutY="104.0" prefHeight="529.0" prefWidth="556.0" style="-fx-background-color: #ffff;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Pane layoutX="54.0" layoutY="44.0" prefHeight="148.0" prefWidth="411.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow color="#060732" />
+               </effect>
+               <children>
+                  <Label layoutX="22.0" layoutY="61.0" prefHeight="27.0" prefWidth="106.0" text="Funcionario:" textFill="#060732">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="103.0" text="Cliente:" textFill="#060732">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox layoutX="134.0" layoutY="59.0" prefHeight="31.0" prefWidth="198.0" promptText="Biote Ngovene" />
+                  <JFXComboBox fx:id="jcbCliente" layoutX="134.0" layoutY="101.0" prefHeight="31.0" prefWidth="198.0" promptText="Biote Ngovene" />
+               </children>
+            </Pane>
+            <Pane layoutX="54.0" layoutY="232.0" prefHeight="259.0" prefWidth="418.0" style="-fx-background-color: #ffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXComboBox fx:id="jcbProduto" layoutX="114.0" layoutY="69.0" prefHeight="25.0" prefWidth="278.0" promptText="Mangas" />
+                  <Label layoutX="25.0" layoutY="68.0" prefHeight="27.0" prefWidth="89.0" text="Produto:" textFill="#060732">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="34.0" text="Tipo de Venda:" textFill="#060732">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="130.0" prefHeight="31.0" prefWidth="106.0" text="Quantidade:" textFill="#060732">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfQuantidade" layoutX="157.0" layoutY="130.0" maxWidth="227.0" minWidth="157.0" prefHeight="31.0" prefWidth="227.0" unFocusColor="BLACK" />
+                  <JFXButton layoutX="98.0" layoutY="214.0" onAction="#incluir" prefHeight="31.0" prefWidth="168.0" style="-fx-background-color: #099085;" text="Incluir" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXComboBox fx:id="jcbTipoVenda" layoutX="165.0" layoutY="33.0" prefHeight="25.0" prefWidth="227.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="507.0" prefHeight="592.0" prefWidth="506.0" style="-fx-background-color: #060732;">
+         <children>
+            <Pane layoutX="-3.0" prefHeight="633.0" prefWidth="587.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <TableView fx:id="tabela" layoutX="-1.0" prefHeight="404.0" prefWidth="587.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="235.0" text="Produto" />
+                        <TableColumn fx:id="colQuantidade" prefWidth="136.0" text="Quantidade" />
+                        <TableColumn fx:id="colPreco" prefWidth="84.0" text="Preco" />
+                        <TableColumn fx:id="colPrecTotal" prefWidth="131.0" text="Preco Total" />
+                    </columns>
+                     <columnResizePolicy>
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label layoutX="28.0" layoutY="431.0" text="Total:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="211.0" layoutY="431.0" text="Observacoes:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea layoutX="323.0" layoutY="431.0" maxWidth="238.0" minWidth="238.0" prefHeight="56.0" prefWidth="238.0" unFocusColor="BLACK" />
+                  <JFXButton layoutX="323.0" layoutY="562.0" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Emitir Recibo">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btConfirmar" layoutX="452.0" layoutY="562.0" onAction="#confirmar" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #099085;" stylesheets="@newCascadeStyleSheet.css" text="Confirmar">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="tfTotal" layoutX="79.0" layoutY="428.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: WHITE;" text="00.00" textFill="#060732">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="-45.0" layoutY="-4.0" prefHeight="108.0" prefWidth="549.0" style="-fx-background-color: #099085;">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_BASKET" layoutX="91.0" layoutY="65.0" size="55" />
+            <Label layoutX="170.0" layoutY="17.0" prefHeight="58.0" prefWidth="331.0" text="Venda Balcão" textFill="#fcfcfc">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

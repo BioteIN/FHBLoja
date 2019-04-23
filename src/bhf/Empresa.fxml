@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.EmpresaController">
+   <children>
+      <ImageView fitHeight="590.0" fitWidth="757.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/4685.jpg" />
+         </image></ImageView>
+      <Pane layoutX="96.0" layoutY="69.0" prefHeight="463.0" prefWidth="566.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutY="-3.0" prefHeight="51.0" prefWidth="566.0" style="-fx-background-color: #caeeeb;">
+               <children>
+                  <Label layoutX="93.0" layoutY="-1.0" text="Dados da Empresa">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="79.0" text="Nome">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="290.0" layoutY="79.0" text="Telefone">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="152.0" text="Usuario">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="290.0" layoutY="152.0" text="Senha">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutX="290.0" layoutY="217.0" text="Senha">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="217.0" text="Email">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <TextField fx:id="nome" layoutX="91.0" layoutY="82.0" prefHeight="25.0" prefWidth="172.0" />
+            <TextField fx:id="telefone" layoutX="376.0" layoutY="82.0" prefHeight="25.0" prefWidth="172.0" />
+            <TextField fx:id="usuario" layoutX="92.0" layoutY="155.0" prefHeight="25.0" prefWidth="172.0" />
+            <TextField fx:id="email" layoutX="94.0" layoutY="219.0" prefHeight="25.0" prefWidth="172.0" />
+            <TextField fx:id="senha" layoutX="376.0" layoutY="155.0" prefHeight="25.0" prefWidth="172.0" />
+            <TextField fx:id="senha1" layoutX="376.0" layoutY="219.0" prefHeight="25.0" prefWidth="172.0" />
+            <JFXButton fx:id="btGuardar" layoutX="269.0" layoutY="290.0" onAction="#gravar" prefHeight="51.0" prefWidth="39.0" style="-fx-background-color: #2bda18;" text=" ">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="40" text="" wrappingWidth="37.28571319580078" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="78.0" layoutY="373.0" text="Atencao: Conserve a Senha e o nome do Usuario" textFill="#d02323">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

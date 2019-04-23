@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="492.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.PagamentosController">
+   <children>
+      <Label fx:id="txtNumero" layoutX="23.0" layoutY="146.0" prefHeight="31.0" prefWidth="164.0" text="Numero de Parcelas" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbxFormaPagamentos" layoutX="202.0" layoutY="149.0" prefHeight="25.0" prefWidth="189.0" stylesheets="@fullpackstyling.css" visible="false" />
+      <Label layoutX="21.0" layoutY="248.0" prefHeight="31.0" prefWidth="151.0" text="Valor Recebido">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValorRecebido" layoutX="200.0" layoutY="251.0" onKeyPressed="#pressionar" prefHeight="25.0" prefWidth="197.0" />
+      <Label layoutX="23.0" layoutY="314.0" prefHeight="31.0" prefWidth="130.0" text="Troco">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtTroco" layoutX="134.0" layoutY="317.0" prefHeight="25.0" prefWidth="189.0" text=" ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btConfirmar" layoutX="146.0" layoutY="435.0" onAction="#confirmar" prefHeight="31.0" prefWidth="164.0" stylesheets="@fullpackstyling.css" text="Confirmar">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="111.0" prefWidth="458.0" style="-fx-background-color: #099085;">
+         <children>
+            <Label layoutX="24.0" layoutY="38.0" prefHeight="31.0" prefWidth="189.0" text="Pagamentos" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="DOLLAR" layoutX="207.0" layoutY="67.0" size="20" />
+         </children>
+      </Pane>
+      <Label layoutX="297.0" layoutY="345.0" prefHeight="31.0" prefWidth="117.0" text="Total a Pagar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDesconto" layoutX="21.0" layoutY="192.0" prefHeight="31.0" prefWidth="151.0" text="Quanto Pagar?" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="21.0" layoutY="296.0" prefHeight="3.0" prefWidth="413.0" style="-fx-background-color: black;" />
+      <JFXTextField fx:id="txtDesconto" layoutX="202.0" layoutY="192.0" maxWidth="189.0" minWidth="189.0" prefHeight="31.0" prefWidth="189.0" visible="false" />
+      <Label fx:id="lbTotal" layoutX="297.0" layoutY="368.0" prefHeight="38.0" prefWidth="100.0" text=" ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

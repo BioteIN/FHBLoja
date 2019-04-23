@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bhf.ProdutoItemsController">
+   <children>
+      <Pane prefHeight="68.0" prefWidth="584.0" style="-fx-background-color: #099085;">
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_BASKET" layoutX="46.0" layoutY="42.0" size="25" />
+            <Label layoutX="85.0" layoutY="16.0" text="Produtos" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btX" layoutX="524.0" layoutY="2.0" onAction="#fechar" prefHeight="36.0" prefWidth="37.0" style="-fx-background-color: #099085;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="tabelinha" layoutX="29.0" layoutY="81.0" prefHeight="402.0" prefWidth="509.0" stylesheets="@fullpackstyling.css">
+        <columns>
+          <TableColumn fx:id="colunaQuant" prefWidth="253.0" text="Quantidade" />
+          <TableColumn fx:id="colunaProd" minWidth="0.0" prefWidth="255.0" text="Produto" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
